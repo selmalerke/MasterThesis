@@ -219,7 +219,7 @@ data {
   int<lower=1> n_E_pred;
   matrix[n_theta_pred,1] t_theta_pred;
   // matrix[n_E_pred,1] t_E_pred;
-
+  // var is actually the value of sd, meaning that the variance is prior_sigma_delta_var^2
   real<lower=0>prior_sigma_delta_mu;
   real<lower=0>prior_sigma_delta_var;
   real<lower=0>prior_l_delta_mu;
