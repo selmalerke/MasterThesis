@@ -2,7 +2,7 @@
 
 #Disclamer. In the code, the angle u is called theta, and sigma_E=sigma_f.
 
-namestring = "P11_DP_rt8_40_100000iters_sun" #what you want to call your run. A folder with this name is created and copies of all files needed are saved in this folder, together with the models (rds-files) and the result plots, together with diagnostics plots
+namestring = "P2_rt8_40_100000iters_sun" #what you want to call your run. A folder with this name is created and copies of all files needed are saved in this folder, together with the models (rds-files) and the result plots, together with diagnostics plots
 
 #If "YES", you obtain both posterior distributions and PPCs for all processes
 do_predictions = "YES"
@@ -24,7 +24,7 @@ if(do_predictions == "NO"){
 pmodel = "DP" #The process you would like to test
 
 #If want to do extrapolation, not in the thesis
-# extrapolate ="NO"
+extrapolate ="NO"
 
 #Set seed to be able to reproduce the results
 gpseed =10
@@ -58,7 +58,7 @@ steplength <- runtime / nummeasurements # Length between each measurement
 
 #Priors
 prior_sigma_theta_mu <- 0 #BASIS = 0
-prior_sigma_theta_var <- 0.02 #BASIS =0.05
+prior_sigma_theta_var <- 0.03 #BASIS =0.05
 range_sigma_theta_upper <- 1 # BASIS = 1
 prior_sigma_delta_mu <- 0 #BASIS =0
 prior_sigma_delta_var <- 1 #BASIS =1
