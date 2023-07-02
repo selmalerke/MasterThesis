@@ -1865,27 +1865,27 @@ if(do_predictions == "YES"){
       )
   )
 
-  # fit_Predict_LP = posterior_predictive("LP", predict_stanfile_wo_disc, predict_stanfile_w_E_disc, nummeasurements, nummeasurements, n_pred, seed, 5, numiters, runtime)
-  # PPC_LP=combine_plots(fit_Predict_LP$data_noisy_pred, "LP", fit_Predict_LP$fit_wo, fit_Predict_LP$fit_w_E, n_pred, runtime)
-  # 
-  # ggsave(paste(namestring, "LPposterior predictive.pdf"), PPC_LP, width = 10, height = 5)
+  fit_Predict_LP = posterior_predictive("LP", predict_stanfile_wo_disc, predict_stanfile_w_E_disc, nummeasurements, nummeasurements, n_pred, seed, 5, numiters, runtime)
+  PPC_LP=combine_plots(fit_Predict_LP$data_noisy_pred, "LP", fit_Predict_LP$fit_wo, fit_Predict_LP$fit_w_E, n_pred, runtime)
 
-  # fit_Predict_LPgp = posterior_predictive("LPgp", predict_stanfile_wo_disc, predict_stanfile_w_E_disc, nummeasurements, nummeasurements, n_pred, seed, 5, numiters, runtime)
-  # PPC_LPgp=combine_plots(fit_Predict_LPgp$data_noisy_pred, "LPgp", fit_Predict_LPgp$fit_wo, fit_Predict_LPgp$fit_w_E, n_pred, runtime)
-  # 
-  # ggsave(paste(namestring, "LPgpposterior predictive.pdf"), PPC_LPgp, width = 10, height = 5)
-  # 
-  # fit_Predict_TP = posterior_predictive("TP", predict_stanfile_wo_disc, predict_stanfile_w_E_disc, nummeasurements, nummeasurements, n_pred, seed, 5, numiters, runtime)
-  # PPC_TP=combine_plots(fit_Predict_TP$data_noisy_pred, "TP", fit_Predict_TP$fit_wo, fit_Predict_TP$fit_w_E, n_pred, runtime)
-  # 
-  # ggsave(paste(namestring, "TPposterior predictive.pdf"), PPC_TP, width = 10, height = 5)
+  ggsave(paste(namestring, "LPposterior predictive.pdf"), PPC_LP, width = 10, height = 5)
+
+  fit_Predict_LPgp = posterior_predictive("LPgp", predict_stanfile_wo_disc, predict_stanfile_w_E_disc, nummeasurements, nummeasurements, n_pred, seed, 5, numiters, runtime)
+  PPC_LPgp=combine_plots(fit_Predict_LPgp$data_noisy_pred, "LPgp", fit_Predict_LPgp$fit_wo, fit_Predict_LPgp$fit_w_E, n_pred, runtime)
+
+  ggsave(paste(namestring, "LPgpposterior predictive.pdf"), PPC_LPgp, width = 10, height = 5)
+
+  fit_Predict_TP = posterior_predictive("TP", predict_stanfile_wo_disc, predict_stanfile_w_E_disc, nummeasurements, nummeasurements, n_pred, seed, 5, numiters, runtime)
+  PPC_TP=combine_plots(fit_Predict_TP$data_noisy_pred, "TP", fit_Predict_TP$fit_wo, fit_Predict_TP$fit_w_E, n_pred, runtime)
+
+  ggsave(paste(namestring, "TPposterior predictive.pdf"), PPC_TP, width = 10, height = 5)
 
   fit_Predict_DP = posterior_predictive("DP", predict_stanfile_wo_disc, predict_stanfile_w_E_disc, nummeasurements, nummeasurements, n_pred, seed, 5, numiters, runtime)
   PPC_DP=combine_plots(fit_Predict_DP$data_noisy_pred, "DP", fit_Predict_DP$fit_wo, fit_Predict_DP$fit_w_E, n_pred, runtime)
 
   ggsave(paste(namestring, "DPposterior predictive.pdf"), PPC_DP, width = 10, height = 5)
-  
-  
+
+  # 
   # PPC_LP=combine_plots(fit_Predict_LP$data_noisy_pred, "LP", fit_Predict_LP$fit_wo, fit_Predict_LP$fit_w_E, n_pred, runtime)
   # PPC_LPgp=combine_plots(fit_Predict_LPgp$data_noisy_pred, "LPgp", fit_Predict_LPgp$fit_wo, fit_Predict_LPgp$fit_w_E, n_pred, runtime)
   # PPC_TP=combine_plots(fit_Predict_TP$data_noisy_pred, "TP", fit_Predict_TP$fit_wo, fit_Predict_TP$fit_w_E, n_pred, runtime)
